@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template:
+      "header" 70px
+      "content" 100% /
+      1fr;
+  }
+  
+  .header {
+    background-color: white;
+
+    display: grid;
+    gap: 5px;
+
+    grid-template-columns: 0.5fr 2fr 1fr;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+
+  
+  .box {
+    border: 2px dotted purple;
+    border-radius: 10px;
+}
+
+.squares {
+    display: grid;
+    gap:5px;
+    padding: 5px;
+    grid-template-columns: repeat(5,auto);
+}
+
+  .content {
+    display: grid;
+    height:100vh;
+    background-color: lightgray;
+    grid-template:
+      "you main news" 1fr /
+      22% 56% 22%;
+    padding: 30px 300px 0 300px;
+    column-gap: 15px;
+  }
+  
+  .you {
+    grid-area: you;
+    display: grid;
+    height: 100vh;
+    grid-template:
+      "profile" 45%
+      "group" 20%
+      "trending"20% /
+      1fr;
+    row-gap: 10px;
+  }
+  
+  .profile {
+    grid-area: profile;
+    background-color: wheat;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 5px;
+  }
+  
+  .group {
+    grid-area: group;
+    background-color: chartreuse;
+    border-radius: 10px;
+  }
+  
+  .trending {
+    grid-area: trending;
+    background-color: blue;
+    border-radius: 10px;
+  }
+  
+  .main {
+    grid-area: main;
+    display: grid;
+    height: 100vh;
+    grid-template:
+      "post" 100px
+      "feed" 1fr /
+      1fr;
+    row-gap: 10px;
+  }
+  
+  .post {
+    grid-area: post;
+    background-color: red;
+    border-radius: 10px;
+  }
+  
+  .feed {
+    grid-area: feed;
+    background-color: coral;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-rows: repeat(4, 500px);
+    gap: 5px;
+    padding: 5px;
+  }
+  
+  .news {
+    grid-area: news;
+    display: grid;
+    height: 100vh;
+    grid-template:
+      "li-news" 30%
+      "most-viewed" 20%
+      "add" 20% /
+      1fr;
+    row-gap: 10px;
+  }
+  
+  .li-news {
+    grid-area: li-news;
+    background-color: blueviolet;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-rows: repeat (3,auto); 
+    gap: 5px;
+    padding: 5px;
+  }
+  
+  .most-viewed {
+    grid-area: most-viewed;
+    background-color: cyan;
+    border-radius: 10px;
+  }
+  .add {
+    grid-area: add;
+    background-color: darkgreen;
+    border-radius: 10px;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .content {
+      padding: 30px 100px 0px 100px;
+    }
+    .header {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .content {
+      grid-template:
+        "you main" 1fr /
+        30% 70%;
+      padding: 30px 50px 0px 50px;
+    }
+    .news {
+      display: none;
+    }
+    
+    .header {
+        margin-left: 50px;
+        margin-right: 50px;
+        grid-template-columns: 0.5fr 2fr;
+    }
+    .squares {
+        display: none
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .content {
+      grid-template:
+        "main" 1fr /
+        1fr;
+      padding: 30px 30px 0px 30px;
+    }
+    .you {
+      display: none;
+    }
+  }
+  
