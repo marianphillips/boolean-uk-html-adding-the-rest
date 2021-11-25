@@ -88,7 +88,7 @@
     display: grid;
     height: 100vh;
     grid-template:
-      "post" 100px
+      "post" 150px
       "feed" 1fr /
       1fr;
     row-gap: 10px;
@@ -98,6 +98,29 @@
     grid-area: post;
     background-color: red;
     border-radius: 10px;
+
+    display: grid;
+    grid-template-rows: repeat(2, 67px);
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .one {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    gap:5px;
+    padding: 5px;
+  }
+
+  .circle {
+    border-radius: 50%;
+  }
+
+  .rectangle {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:5px;
+    padding: 5px;
   }
   
   .feed {
@@ -150,8 +173,8 @@
       padding: 30px 100px 0px 100px;
     }
     .header {
-        margin-left: 100px;
-        margin-right: 100px;
+        padding-left: 100px;
+        padding-right: 100px;
     }
   }
   
@@ -167,8 +190,8 @@
     }
     
     .header {
-        margin-left: 50px;
-        margin-right: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
         grid-template-columns: 0.5fr 2fr;
     }
     .squares {
